@@ -1,0 +1,9 @@
+// Code your design here
+module example(a,b,c,y);
+  
+  input a,b,c;
+  output y;
+  
+  assign y = (~b & ~c) | (a & ~b);
+  
+endmodule
