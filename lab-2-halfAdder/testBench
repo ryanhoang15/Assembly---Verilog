@@ -1,0 +1,68 @@
+// Code your testbench here
+// or browse Examples
+`timescale 1ns/1ps
+
+module testbench();
+  reg a1, b1;
+  wire s1, cout1;
+  
+  //now call your function and pass in the params
+  halfadder ha1(a1,b1,s1,cout1);
+  
+  initial begin
+    $dumpfile("dump.vcd");
+    $dumpvars(1,testbench);
+    
+    //define the first test case
+    a1 = 1'b0;
+    b1 = 1'b0;
+    
+    $display("Test Case 1");
+    //output the input values to the console
+    $display("a=%b",a1);
+    $display("b=%b",b1);
+    
+    //put time delay for module execution
+    #1 
+    $display("s=%b",s1);
+    $display("cout=%b",cout1);
+    
+    
+    //define the second test case
+    a1 = 1'b0;
+    b1 = 1'b1;
+    $display("\nTest Case 2");
+    $display("a=%b",a1);
+    $display("b=%b",b1);
+       
+    #1 
+    $display("s=%b",s1);
+    $display("cout=%b",cout1);
+    
+    
+    //define the third test case
+    a1 = 1'b1;
+    b1 = 1'b0;
+    $display("\nTest Case 3");
+    $display("a=%b",a1);
+    $display("b=%b",b1);
+    
+    #1 
+    $display("s=%b",s1);
+    $display("cout=%b",cout1);
+    
+   
+    //define the fourth test case
+    a1 = 1'b1;
+    b1 = 1'b1;
+    $display("\nTest Case 4");
+    $display("a=%b",a1);
+    $display("b=%b",b1);
+    
+    #1 
+    $display("s=%b",s1);
+    $display("cout=%b",cout1);
+    
+  end
+  
+endmodule
