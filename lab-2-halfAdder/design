@@ -1,0 +1,14 @@
+// Code your design here
+module halfadder(a, b, s, cout);
+	input a,b;
+	output s,cout;
+  
+// two assign statement because you have two outputs
+
+    // assign s is the output for a exclusive or b
+  	assign s = a ^ b;
+    
+    // this output is for a & b
+    assign cout = a & b;
+
+endmodule
