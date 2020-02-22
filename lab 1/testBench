@@ -1,0 +1,23 @@
+`timescale 1ns/1ps
+
+module testbench();
+  reg a1;
+  reg b1;
+  reg c1;
+  wire y1;
+  example ex1(a1,b1,c1,y1);
+  
+  initial begin
+    a1 = 1'b0;
+    b1 = 1'b0;
+    c1 = 1'b1;
+    
+    $display ("a=%b",a1);
+    $display ("b=%b",b1);
+    $display ("c=%b",c1);
+    
+    #1
+    $display ("y=%b",y1);
+  end
+  
+endmodule
