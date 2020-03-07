@@ -1,0 +1,133 @@
+// Code your testbench here
+// or browse Examples
+`timescale 1ns/1ps
+
+module testbench();
+  reg a1, b1, c1;
+  wire y1;
+  
+  //now call your function and pass in the params
+  Boolean bool1(a1,b1,c1,y1);
+  
+  initial begin
+    $dumpfile("dump.vcd");
+    $dumpvars(1,testbench);
+    
+    //define the first test case
+    a1 = 1'b0;
+    b1 = 1'b0;
+    c1 = 1'b0;
+    
+    $display("Test Case 1");
+    //output the input values to the console
+    $display("a=%b",a1);
+    $display("b=%b",b1);
+    $display("c=%b",c1);
+    
+    //put time delay for module execution
+    #1 
+    $display("y=%b",y1);
+
+    
+    //define the second test case
+    a1 = 1'b0;
+    b1 = 1'b0;
+    c1 = 1'b1;
+    
+    $display("\nTest Case 2");
+    $display("a=%b",a1);
+    $display("b=%b",b1);
+    $display("c=%b",c1);
+       
+    #1 
+    $display("y=%b",y1);
+  
+    
+    //define the third test case
+ 	a1 = 1'b0;
+    b1 = 1'b1;
+    c1 = 1'b0;
+    
+    $display("\nTest Case 3");
+    $display("a=%b",a1);
+    $display("b=%b",b1);
+    $display("c=%b",c1);
+    
+    #1 
+    $display("y=%b",y1);
+   
+   
+    //define the fourth test case
+    a1 = 1'b0;
+    b1 = 1'b1;
+    c1 = 1'b1;
+    
+    $display("\nTest Case 4");
+    $display("a=%b",a1);
+    $display("b=%b",b1);
+    $display("c=%b",c1);
+    
+    #1 
+    $display("y=%b",y1);
+    
+    
+    //define the fifth test case
+    a1 = 1'b1;
+    b1 = 1'b0;
+    c1 = 1'b0;
+    
+    $display("\nTest Case 5");
+    $display("a=%b",a1);
+    $display("b=%b",b1);
+    $display("c=%b",c1);
+    
+    #1 
+    $display("y=%b",y1);
+    
+       
+    //define the sixth test case
+    a1 = 1'b1;
+    b1 = 1'b0;
+    c1 = 1'b1;
+    
+    $display("\nTest Case 6");
+    $display("a=%b",a1);
+    $display("b=%b",b1);
+    $display("c=%b",c1);
+    
+    #1 
+    $display("y=%b",y1);
+    
+        
+    //define the seventh test case
+    a1 = 1'b1;
+    b1 = 1'b1;
+    c1 = 1'b0;
+    
+    $display("\nTest Case 7");
+    $display("a=%b",a1);
+    $display("b=%b",b1);
+    $display("c=%b",c1);
+    
+    #1 
+    $display("y=%b",y1);
+    
+       
+    //define the eighth test case
+    a1 = 1'b1;
+    b1 = 1'b1;
+    c1 = 1'b1;
+    
+    $display("\nTest Case 8");
+    $display("a=%b",a1);
+    $display("b=%b",b1);
+    $display("c=%b",c1);
+    
+    #1 
+    $display("y=%b",y1);
+   
+  end
+  
+endmodule
+
+  
