@@ -21,7 +21,7 @@ module encoder (in, code);
 //      else if (in[3]) code = 3'b010;
 //      else if (in[2]) code = 3'b001;
 //      else if (in[1]) code = 3'b000;
-//      else if (in[0]) code = 3'bxxx; 
+//      else if (in[0]) code = 3'b000; 
 //      else            code = 3'bxxx; 
   
       end
