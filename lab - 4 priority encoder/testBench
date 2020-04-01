@@ -1,1 +1,99 @@
+// Code your testbench here
+// or browse Examples
+`timescale 1ns/1ps
 
+module testbench;
+  reg [7:0] in;
+  wire [2:0] code;
+  
+  encoder enc1 (in, code);
+  initial begin
+    $dumpfile("dump.vcd");
+    $dumpvars(1,testbench);
+    
+    //define the first test case
+    in = 8'b00000000;
+    
+    $display("Test Case 1");
+
+    #1 
+    $display("in=%b,code=%b",in,code);     
+    
+
+       
+    //define the second test case
+    in = 8'b00000001;
+    $display("\nTest Case 2");
+    
+    #1 
+    $display("in=%b,code=%b",in,code);  
+    
+    
+    
+      //define the third test case
+ 	in = 8'b00000010;
+    
+    $display("\nTest Case 3");
+   
+    #1 
+    $display("in=%b,code=%b",in,code);  
+   
+   
+    //define the fourth test case
+    in = 8'b00000100;
+    
+    $display("\nTest Case 4");
+    
+    #1 
+    $display("in=%b,code=%b",in,code);  
+    
+    
+    //define the fifth test case
+    in = 8'b000001000;
+    
+    $display("\nTest Case 5");
+    
+    #1 
+    $display("in=%b,code=%b",in,code);  
+    
+       
+    //define the sixth test case
+    in = 8'b00010000;
+    
+    $display("\nTest Case 6");
+    
+    #1 
+    $display("in=%b,code=%b",in,code);  
+    
+        
+    //define the seventh test case
+    in = 8'b00100000;
+    
+    $display("\nTest Case 7");
+    
+    #1 
+    $display("in=%b,code=%b",in,code);  
+    
+       
+    //define the eighth test case
+    in = 8'b01000000;
+    
+    $display("\nTest Case 8");
+    
+    
+    #1 
+    $display("in=%b,code=%b",in,code); 
+    
+    
+    
+    //define the ninth test case
+    //in = 8'b10000000;
+    
+    //$display("\nTest Case 9");
+    
+    
+    //#1 
+    //$display("in=%b,code=%b",in,code);  
+    
+    end
+endmodule
